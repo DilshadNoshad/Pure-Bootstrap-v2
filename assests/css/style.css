@@ -1,0 +1,63 @@
+@font-face {
+  font-family: Montserrat-R;
+  src: url(../font/Montserrat-Regular.ttf);
+}
+
+:root {
+  --primary_clr: #eee;
+  --secondary-clr_H: 264;
+  --secondary-clr_S: 39%;
+  --secondary-clr_l: 51%;
+}
+
+body {
+  font-family: "Montserrat-R", serif;
+  background-color: var(--primary_clr);
+}
+
+/* sidebar start */
+.sidebar {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url("../img/flower_wallper.jpg") no-repeat center center/ cover;
+  box-shadow: 5px 5px 10px #999;
+}
+
+.bottom-border {
+  border-bottom: 1px groove var(--primary_clr);
+}
+
+/*------------------- admin image */
+.admin_img {
+  width: 50px;
+  height: 50px;
+  outline: 2.5px solid var(--primary_clr);
+  outline-offset: 2.5px;
+}
+
+.sidebar-link:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+.sidebar-link {
+  transition: all 0.4s;
+}
+
+.current-link {
+  background-color: hsl(
+    var(--secondary-clr_H),
+    var(--secondary-clr_S),
+    var(--secondary-clr_l)
+  );
+  border-radius: 7px;
+  transition: all 0.3s;
+  box-shadow: 2px 5px 10px #111;
+}
+.current-link:hover {
+  --secondary-clr_l: 60%;
+  border-radius: 7px;
+  transform: translateY(-1px);
+  box-shadow: 2px 5px 20px #111;
+}
+
+/* sidebar end */
