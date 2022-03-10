@@ -14,7 +14,35 @@ body {
   font-family: "Montserrat-R", serif;
   background-color: var(--primary_clr);
 }
+/*------------------------------------ custom colors */
+/* search btn */
+.btn-custom-clr {
+  background-color: hsl(
+    var(--secondary-clr_H),
+    var(--secondary-clr_S),
+    var(--secondary-clr_l)
+  );
+}
 
+/* search btn end*/
+/* search btn */
+.ico-custom-clr {
+  color: hsl(
+    var(--secondary-clr_H),
+    var(--secondary-clr_S),
+    var(--secondary-clr_l)
+  );
+}
+
+.btn-custom-clr:hover,
+.ico-custom-clr:hover {
+  --secondary-clr_l: 60%;
+}
+
+/* search btn end*/
+/*------------------------------------ custom colors end*/
+
+/*------------------------------------ nav start */
 /* sidebar start */
 .sidebar {
   height: 100vh;
@@ -61,3 +89,69 @@ body {
 }
 
 /* sidebar end */
+
+.search-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #999;
+  border-radius: 0;
+  transition: all 0.4s;
+}
+.search-input:focus {
+  background: transparent;
+  box-shadow: none;
+  border-bottom: 2px solid
+    hsl(var(--secondary-clr_H), var(--secondary-clr_S), var(--secondary-clr_l));
+  color: #fff;
+}
+
+.search-btn {
+  border-radius: 50% !important;
+  padding: 10px 16px;
+  transition: all 0.4s;
+}
+.search-btn:hover {
+  transform: scale(1.1);
+}
+
+.ico-parent {
+  position: relative;
+}
+.ico-dot::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  height: 9px;
+  width: 9px;
+
+  border-radius: 50%;
+  background-color: hsl(
+    var(--secondary-clr_H),
+    var(--secondary-clr_S),
+    var(--secondary-clr_l)
+  );
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .top-navbar {
+    position: static;
+  }
+}
+/*------------------------------------ nav  end */
+
+/* cards  start */
+
+.card-stl {
+  box-shadow: 1px 2px 5px #999;
+  transition: all 0.4s;
+}
+.card-stl:hover {
+  box-shadow: 5px 5px 15px #999;
+  transform: translateY(-1px);
+}
+/* cards  end */
