@@ -155,3 +155,10 @@ body {
   transform: translateY(-1px);
 }
 /* cards  end */
+
+/* task start */
+.task-border {
+  border-left: 2px solid
+    hsl(var(--secondary-clr_H), var(--secondary-clr_S), var(--secondary-clr_l));
+}
+/* task end */
