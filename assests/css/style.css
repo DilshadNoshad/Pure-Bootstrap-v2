@@ -50,6 +50,28 @@ body {
     url("../img/flower_wallper.jpg") no-repeat center center/ cover;
   box-shadow: 5px 5px 10px #999;
 }
+@media (min-width: 768px) {
+  .sidebar:hover {
+    overflow-x: visible;
+    overflow-y: auto;
+  }
+  .sidebar::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  .sidebar::-webkit-scrollbar:vertical {
+    width: 4px;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .sidebar::-webkit-scrollbar-track {
+    background-color: #999;
+  }
+}
 
 .bottom-border {
   border-bottom: 1px groove var(--primary_clr);
